@@ -1,7 +1,12 @@
 import os
 from .orchestrator import Orchestrator
-from dotenv import load_dotenv
 from .mongo_client import AtlasClient
+import logging
+from dotenv import load_dotenv
+
+logging.basicConfig(level=logging.INFO,
+                    format='%(levelname)s %(asctime)s [%(filename)s:%(lineno)d]: %(message)s'
+                    )
 
 load_dotenv()
 
